@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../../common/widgets/app_button.dart';
 
 class Onboard extends StatelessWidget {
-  const Onboard({Key? key}) : super(key: key);
+  const Onboard({Key? key, required this.title, required this.caption, required this.imagePath}) : super(key: key);
+  final String title, caption, imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +17,11 @@ class Onboard extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/images/reading.png'),
+                Image.asset(imagePath),
                 const SizedBox(height: 10),
-                const Text('One'),
+                Text(title),
                 const SizedBox(height: 30),
-                const Text('Three'),
+                Text(caption),
                 const SizedBox(height: 50),
               ],
             ),
