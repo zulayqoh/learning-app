@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:learning_app/pages/learn/myhome.dart';
+import 'package:learning_app/pages/onboarding/onboarding_page.dart';
 
 final appCount = StateProvider((ref) => 5);
 
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      home: const OnboardingPage(),
     );
   }
 }
